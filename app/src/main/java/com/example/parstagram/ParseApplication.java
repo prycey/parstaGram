@@ -14,6 +14,7 @@ public class ParseApplication extends Application {
 
         // Use for troubleshooting -- remove this line f
         ParseObject.registerSubclass(Post.class);
+        ParseObject.registerSubclass(Comment.class);
         // set applicationId, and server server based on the values in the Heroku settings.
         // clientKey is not needed unless explicitly configured
         // any network interceptors must be added with the Configuration Builder given this syntax

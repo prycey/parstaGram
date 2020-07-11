@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
     public static final String TAG = "LoginActivity";
     private EditText etUsername;
     private EditText  etPassword;
+    private Button  suButton;
     private Button btnLogin;
 
     @Override
@@ -31,12 +32,20 @@ public class LoginActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btn);
+        suButton = findViewById(R.id.suButton);
          btnLogin.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
                  String username = etUsername.getText().toString();
                  String password = etPassword.getText().toString();
                 loginUser(username, password);
+             }
+         });
+         suButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+                 startActivity(i);
              }
          });
 
